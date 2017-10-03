@@ -6,13 +6,13 @@
 #    By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/11 13:01:35 by jtahirov          #+#    #+#              #
-#    Updated: 2017/10/02 20:07:05 by jtahirov         ###   ########.fr        #
+#    Updated: 2017/10/02 20:36:14 by jtahirov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-GCCW = gcc -Wall -Wextra -Werror
+GCCW = gcc -Wall -Wextra -Werror 
 NAME = fillit
-SRC = tetri_shape.c
+SRC =  main.c tetri_shape.c
 
 OBJECT = $(SRC:.c=.o)
 
@@ -20,8 +20,8 @@ all: libft_compile $(NAME)
 
 $(NAME):
 	@echo "Compiling Project..."
-	@$(GCW) -I./ -c $(SRC)
-	@$(GCW) -o $(NAME) $(OBJECT)
+	@$(GCCW) -I ./libft -c $(SRC)
+	@$(GCCW) $(OBJECT) ./libft/libft.a -o $(NAME)
 	@echo "Finished!"
 
 libft_compile:
@@ -38,7 +38,7 @@ clean:
 	@/bin/rm -f $(OBJECT)
 	@echo "Cleaned"
 
-fclean: clean
+fclean: clean libft_fclean
 	@/bin/rm -f $(NAME)
 
 re: fclean all
