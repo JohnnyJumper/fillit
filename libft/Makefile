@@ -6,7 +6,7 @@
 #    By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/11 13:01:35 by jtahirov          #+#    #+#              #
-#    Updated: 2017/09/30 17:53:34 by jtahirov         ###   ########.fr        #
+#    Updated: 2017/10/02 20:02:16 by jtahirov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = libft.a
@@ -31,16 +31,16 @@ OBJECT = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	@echo "Compiling..."
-	@$(GCCW) -I./includes -c $(SRC)
+	@echo "Compiling Libft..."
+	@$(GCCW) -I. -c $(SRC)
 	@ar rc $(NAME) $(OBJECT)
 	@ranlib $(NAME)
-	@echo "\nFinished!\n"
+	@echo "Done!"
 
 clean:
-	@echo "Cleanning...\n"
+	@echo "Cleanning Libft..."
 	@/bin/rm -f $(OBJECT)
-	@echo "Cleaned\n"
+	@echo "Cleaned"
 
 fclean: clean
 	@/bin/rm -f $(NAME)
