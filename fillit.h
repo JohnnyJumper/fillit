@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 20:16:59 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/02 21:50:39 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/05 15:10:53 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FILLIT_H
 
 #include "libft.h"
+#include <fcntl.h>
+#include <unistd.h>
 
 typedef struct	s_shape
 {
@@ -23,7 +25,15 @@ typedef struct	s_shape
 	char	bukva;
 }				t_shape;
 
+typedef struct	s_coord
+{
+	int		x;
+	int		y;
+}				t_coord;
+
 char			**ft_create_shape_base(void);
 t_shape			*t_shapenew(char *shape, int height, int width, char bukva);
+char			*open_file(int fd);
+int				check_map(char *buf);
 
 #endif
