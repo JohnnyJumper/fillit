@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 20:16:59 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/05 15:10:53 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/05 15:32:16 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 typedef struct	s_shape
 {
-	char	*shape;
+	char	**shape;
 	int		height;
 	int		width;
 	char	bukva;
