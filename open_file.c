@@ -6,7 +6,7 @@
 /*   By: ynenakho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 16:25:57 by ynenakho          #+#    #+#             */
-/*   Updated: 2017/10/05 22:20:35 by ynenakho         ###   ########.fr       */
+/*   Updated: 2017/10/05 22:57:39 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ int		open_file(char **argv)
 	int		fd;
 	char	*buf;
 	int		ret;
+	t_list	*list;
+	char	bukva;
 
+	list = NULL;
+	bukva = 'A';
 	buf = ft_strnew(21);
 	if(!(fd = open(argv[1], O_RDONLY)))
 	{
@@ -30,11 +34,27 @@ int		open_file(char **argv)
 			ft_putstr("invalid map\n");
 			return(1);
 		}
-
+		ft_lstadd(&list, ft_lstnew((void *)identify_shape(buf,bukva++), sizeof(t_shape)));
 	}
-
+	ft_printlst(list);
 	return (0);
 }
+
+void	ft_printlst(t_list *list)
+{
+	t_list	*current;
+	t_shape	*shape;
+
+	current = list;
+	while (current)
+	{
+		shape = (t_shape *)current->content;
+		ft_print2d(shape->shape);
+		current = current->next;
+	}
+}
+
+
 
 int		check_map(char *buf)
 {
