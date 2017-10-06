@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 15:57:50 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/03 16:49:57 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/05 15:44:13 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,6 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void			*ft_bubblesort(int *array, size_t array_size);
 void			ft_print_array_int(int *array, size_t array_size);
-void			*push(void *array, size_t len, void *data, size_t data_len)
+void			*push(void *array, size_t len, void *data, size_t data_len);
 
 #endif

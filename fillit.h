@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 20:16:59 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/05 15:32:16 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/05 21:59:17 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ typedef struct	s_coord
 
 char			**ft_create_shape_base(void);
 t_shape			*t_shapenew(char *shape, int height, int width, char bukva);
-char			*open_file(int fd);
+int				open_file(char **argv);
 int				check_map(char *buf);
+int				check_connection(char *buf);
+int				check_place(char *buf);
 
 #endif
