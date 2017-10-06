@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print2D.c                                       :+:      :+:    :+:   */
+/*   ft_print2d.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 03:17:11 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/09/25 18:25:29 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/06 16:17:59 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 void	ft_print2d(char **array)
 {
-	if (!array)
-		return ;
 	while (*array)
 	{
 		ft_putstr(*array);
-		if (*(array + 1))
-			ft_putchar('\n');
-		else
-			ft_putstr("\nNULL\n");
+		ft_putchar('\n');
 		array++;
 	}
 }

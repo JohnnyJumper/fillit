@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 20:16:59 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/05 21:59:17 by ynenakho         ###   ########.fr       */
+/*   Updated: 2017/10/05 22:44:30 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,11 @@ int				open_file(char **argv);
 int				check_map(char *buf);
 int				check_connection(char *buf);
 int				check_place(char *buf);
+t_coord			*coord_new(int x, int y);
+void			min_max(char *buf, t_coord *min, t_coord *max);
+t_shape			*shape_new(char **shape, int width, int height, char bukva);
+t_shape			*identify_shape(char *buf, char bukva);
+void			ft_printlst(t_list *list);
+
 
 #endif
