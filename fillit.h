@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 20:16:59 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/07 14:10:17 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 14:27:07 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 #include "libft.h"
 #include <fcntl.h>
 #include <unistd.h>
+
+typedef struct	s_map
+{
+	int		size;
+	char	**array;
+}				t_map;
 
 typedef struct	s_shape
 {

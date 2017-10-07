@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 15:57:50 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/05 15:44:13 by ynenakho         ###   ########.fr       */
+/*   Updated: 2017/10/07 14:34:28 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct	s_list
 
 typedef	unsigned char	t_byte;
 
+size_t			ft_lstcount(t_list *lst);
 void			ft_putchar(char z);
 void			ft_putstr(const char *str);
 void			ft_putnbr(int num);
