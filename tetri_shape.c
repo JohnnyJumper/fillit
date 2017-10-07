@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 18:40:56 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/06 16:23:06 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 13:59:57 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,13 +68,13 @@ t_shape		*identify_shape(char *buf, char bukva)
 	min = coord_new(3, 3);
 	max = coord_new(0, 0);
 	min_max(buf, min, max);
-
-	shape = (char **)ft_memalloc((max->y - min->y) + 2);
+	shape = (char **)ft_memalloc(sizeof(char *) * ((max->y - min->y) + 2));
 	counter = 0;
 	while (counter < (max->y - min->y + 1))
 	{
 		*shape = ft_strnew(max->x - min->x + 1);
-		ft_strncpy(*shape, (buf + (min->x) + (counter + min->y) * 5), (max->x - min->x + 1));
+		ft_strncpy(*shape, (buf + (min->x) + (counter + min->y) * 5),
+				(max->x - min->x + 1));
 		counter++;
 		shape++;
 	}

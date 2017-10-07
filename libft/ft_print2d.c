@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 03:17:11 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/06 16:17:59 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 13:54:38 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_print2d(char **array)
 	while (*array)
 	{
 		ft_putstr(*array);
-		ft_putchar('\n');
+		ft_putstr("\n");
 		array++;
 	}
 }
