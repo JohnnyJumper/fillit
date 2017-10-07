@@ -6,13 +6,13 @@
 #    By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/11 13:01:35 by jtahirov          #+#    #+#              #
-#    Updated: 2017/10/06 16:25:57 by jtahirov         ###   ########.fr        #
+#    Updated: 2017/10/07 14:54:10 by jtahirov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 GCCW = gcc -Wall -Wextra -Werror 
 NAME = fillit
-SRC =  main.c tetri_shape.c open_file.c
+SRC =  main.c tetri_shape.c open_file.c solve.c
 
 OBJECT = $(SRC:.c=.o)
 
