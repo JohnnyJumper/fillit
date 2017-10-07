@@ -6,13 +6,13 @@
 /*   By: ynenakho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/07 14:27:37 by ynenakho          #+#    #+#             */
-/*   Updated: 2017/10/07 14:53:25 by ynenakho         ###   ########.fr       */
+/*   Updated: 2017/10/07 14:59:57 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		sqrt(int i)
+int		sq_rt(int i)
 {
 	int sqr_size;
 
