@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 20:16:59 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/05 22:44:30 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 14:10:17 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ void			min_max(char *buf, t_coord *min, t_coord *max);
 t_shape			*shape_new(char **shape, int width, int height, char bukva);
 t_shape			*identify_shape(char *buf, char bukva);
 void			ft_printlst(t_list *list);
+void			free_list(t_list *list);
+void			free_shape(t_shape *shape);
 
 
 #endif
