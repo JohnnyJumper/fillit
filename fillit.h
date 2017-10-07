@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 20:16:59 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/07 15:00:06 by ynenakho         ###   ########.fr       */
+/*   Updated: 2017/10/07 15:03:46 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef struct	s_coord
 }				t_coord;
 
 void			print_map(t_map *map);
-t_map			alloc_map(int size);
+t_map			*alloc_map(int size);
 int				sq_rt(int i);
 void			free_map(t_map *map);
 char			**ft_create_shape_base(void);
@@ -56,7 +56,7 @@ void			free_list(t_list *list);
 void			free_shape(t_shape *shape);
 int				solve_map(t_map *map, t_list *list);
 t_map			*solve(t_list *list);
-int				place(t_map map, t_shape shape, int x, int y);
-void			put(t_map map, t_shape shape, t_coord coord, char bukva);
+int				place(t_map *map, t_shape *shape, int x, int y);
+void			put(t_map *map, t_shape *shape, t_coord *coord, char bukva);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ynenakho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 16:25:57 by ynenakho          #+#    #+#             */
-/*   Updated: 2017/10/07 13:59:31 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 14:59:03 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		open_file(char **argv)
 		ft_lstadd(&list, ft_lstnew((void *)identify_shape(buf, bukva++),
 					sizeof(t_shape)));
 	}
-	ft_printlst(list);
+	print_map(solve(list));
 	return (0);
 }
 

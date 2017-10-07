@@ -6,7 +6,7 @@
 /*   By: ynenakho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/07 14:27:37 by ynenakho          #+#    #+#             */
-/*   Updated: 2017/10/07 14:59:57 by ynenakho         ###   ########.fr       */
+/*   Updated: 2017/10/07 15:04:00 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		sq_rt(int i)
 	
 }
 
-t_map	alloc_map(int size)
+t_map	*alloc_map(int size)
 {
 	t_map	*map;
 	int		i;

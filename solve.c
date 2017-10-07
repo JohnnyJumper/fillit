@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 22:30:26 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/07 14:46:28 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 15:04:23 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,34 +41,23 @@ int		solve_map(t_map *map, t_list *list)
 	return (0);
 }
 
-int		sqrt(int num)
-{
-	int size;
-
-	size = 2;
-	while (size*size < n)
-		size++;
-	return (size);
-}
-
-
-t_map	solve(t_list *list)
+t_map	*solve(t_list *list)
 {
 	t_map	*map;
 	int		size;
 
-	size = sqrt(ft_lstcount * 4);
-	map = map_new(size);
+	size = sq_rt(ft_lstcount(list) * 4);
+	map = alloc_map(size);
 	while(!solve_map(map, list))
 	{
 		size++;
 		free_map(map);
-		map = map_new(size);
+		map = alloc_map(size);
 	}
 	return (map);
 }
 
-int		place(t_map map, t_shape shape, int x, int y)
+int		place(t_map *map, t_shape *shape, int x, int y)
 {
 	int row;
 	int col;
@@ -89,7 +78,7 @@ int		place(t_map map, t_shape shape, int x, int y)
 	return (1);
 }
 
-void	put(t_map map, t_shape shape, t_coord coord, char bukva)
+void	put(t_map *map, t_shape *shape, t_coord *coord, char bukva)
 {
 	int x;
 	int y;
@@ -101,7 +90,7 @@ void	put(t_map map, t_shape shape, t_coord coord, char bukva)
 		while (y < shape ->height)
 		{
 			if (shape->shape[y][x] == '#')
-				map->array[coord->y + y][coord->x + x] = c;
+				map->array[coord->y + y][coord->x + x] = bukva;
 			y++;
 		}
 		x++;
