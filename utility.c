@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/07 14:02:38 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/07 14:08:15 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 14:53:40 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,18 @@ void	free_shape(t_shape *shape)
 	}
 	ft_memdell((void **)&shape->shape);
 	ft_memdell((void **)&shape);
+}
+
+void	free_map(t_map *map)
+{
+	int i;
+
+	i = 0;
+	while (i < map->size)
+	{
+		ft_memdel((void **)&(map->array[i]));
+		i++;
+	}
+	ft_memdel((void **)&(map->array));
+	ft_memdel((void **)&map);
 }
