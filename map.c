@@ -6,7 +6,7 @@
 /*   By: ynenakho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/07 14:27:37 by ynenakho          #+#    #+#             */
-/*   Updated: 2017/10/07 15:04:00 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 20:14:57 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int		sq_rt(int i)
 	while ((sqr_size * sqr_size) < i)
 		sqr_size++;
 	return (sqr_size);
-	
 }
 
 t_map	*alloc_map(int size)

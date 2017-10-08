@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 20:26:17 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/07 18:01:33 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 20:17:34 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 
 int	main(int argc, char **argv)
 {
-
-	t_list *list;
-	int fd;
+	t_list	*list;
+	int		fd;
 
 	if (argc != 2)
 	{

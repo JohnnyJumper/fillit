@@ -6,16 +6,16 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 20:16:59 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/07 18:20:10 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 20:18:33 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLIT_H
 # define FILLIT_H
 
-#include "libft.h"
-#include <fcntl.h>
-#include <unistd.h>
+# include "libft.h"
+# include <fcntl.h>
+# include <unistd.h>
 
 typedef struct	s_map
 {
@@ -37,6 +37,8 @@ typedef struct	s_coord
 	int		y;
 }				t_coord;
 
+int				check_check(int hash_c, int dot_counter, int line_counter, \
+		int *flag);
 void			print_map(t_map *map);
 t_map			*alloc_map(int size);
 int				sq_rt(int i);

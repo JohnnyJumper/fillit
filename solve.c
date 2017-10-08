@@ -6,7 +6,7 @@
 /*   By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 22:30:26 by jtahirov          #+#    #+#             */
-/*   Updated: 2017/10/07 15:04:23 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 20:16:38 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		solve_map(t_map *map, t_list *list)
 				if (solve_map(map, list->next))
 					return (1);
 				else
-					put(map, shape, coord_new(x,y), '.');
+					put(map, shape, coord_new(x, y), '.');
 			}
 			x++;
 		}
@@ -48,7 +48,7 @@ t_map	*solve(t_list *list)
 
 	size = sq_rt(ft_lstcount(list) * 4);
 	map = alloc_map(size);
-	while(!solve_map(map, list))
+	while (!solve_map(map, list))
 	{
 		size++;
 		free_map(map);
@@ -68,7 +68,8 @@ int		place(t_map *map, t_shape *shape, int x, int y)
 		col = 0;
 		while (col < shape->height)
 		{
-			if (shape->shape[col][row] == '#' && map->array[col + y][row + x] != '.')
+			if (shape->shape[col][row] == '#' \
+					&& map->array[col + y][row + x] != '.')
 				return (0);
 			col++;
 		}
@@ -87,7 +88,7 @@ void	put(t_map *map, t_shape *shape, t_coord *coord, char bukva)
 	while (x < shape->width)
 	{
 		y = 0;
-		while (y < shape ->height)
+		while (y < shape->height)
 		{
 			if (shape->shape[y][x] == '#')
 				map->array[coord->y + y][coord->x + x] = bukva;

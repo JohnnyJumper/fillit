@@ -6,7 +6,7 @@
 /*   By: ynenakho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 16:25:57 by ynenakho          #+#    #+#             */
-/*   Updated: 2017/10/07 18:47:20 by jtahirov         ###   ########.fr       */
+/*   Updated: 2017/10/07 20:13:47 by ynenakho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,27 +24,32 @@ t_list	*open_file(int fd)
 	bukva = 'A';
 	buf = ft_strnew(21);
 	flag = 0;
-	while((ret = read(fd, buf, 21)) >= 20)
+	while ((ret = read(fd, buf, 21)) >= 20)
 	{
 		if (check_map(buf, &flag))
-			return(NULL);
+			return (NULL);
 		ft_lstpush(&list, ft_lstnew((void *)identify_shape(buf, bukva++),
 					sizeof(t_shape)));
 		ft_bzero(buf, 21);
 	}
-	if	(ret != 0 || flag != 1)
+	if (ret != 0 || flag != 1)
 		return (NULL);
 	return (list);
 }
 
-int		check_check(int hash_counter, int dot_counter, int line_counter)
+int		check_check(int hash_counter, int dot_counter, \
+		int line_counter, int *flag)
 {
 	if (hash_counter != 4)
 		return (1);
 	if (dot_counter != 12)
 		return (1);
 	if (line_counter == 4)
-		return (2);
+	{
+		if (*flag != 1)
+			*flag = 1;
+		return (0);
+	}
 	if (line_counter != 5)
 		return (1);
 	return (0);
@@ -71,13 +76,7 @@ int		check_map(char *buf, int *flag)
 			line_counter++;
 		counter++;
 	}
-	if (check_check(hash_counter, dot_counter, line_counter) == 2)
-	{
-		if (*flag != 1)
-			*flag = 1;
-		else
-			return (1);
-	} else if (check_check(hash_counter, dot_counter, line_counter))
+	if (check_check(hash_counter, dot_counter, line_counter, flag))
 		return (1);
 	if (check_connection(buf) || check_place(buf))
 		return (1);
@@ -127,7 +126,5 @@ int		check_place(char *buf)
 			return (1);
 		i++;
 	}
-	/* if (buf[i] != '\n') */
-	/* 	return (1); */
 	return (0);
 }
