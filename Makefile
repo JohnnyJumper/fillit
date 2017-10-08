@@ -6,7 +6,7 @@
 #    By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/11 13:01:35 by jtahirov          #+#    #+#              #
-#    Updated: 2017/10/07 16:36:34 by jtahirov         ###   ########.fr        #
+#    Updated: 2017/10/07 18:50:16 by jtahirov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ libft_clean:
 libft_fclean:
 	@+$(MAKE) fclean -C ./libft
 
-clean: 
+clean: libft_clean
 	@echo "Cleanning Project..."
 	@/bin/rm -f $(OBJECT)
 	@echo "Cleaned"
