@@ -6,11 +6,11 @@
 #    By: jtahirov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/11 13:01:35 by jtahirov          #+#    #+#              #
-#    Updated: 2017/10/07 15:05:42 by jtahirov         ###   ########.fr        #
+#    Updated: 2017/10/07 16:36:34 by jtahirov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-GCCW = gcc -Wall -Wextra -Werror 
+GCCW = gcc  -g -Wall -Wextra -Werror 
 NAME = fillit
 SRC =  main.c tetri_shape.c open_file.c solve.c map.c utility.c
 
