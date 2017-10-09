@@ -6,7 +6,7 @@
 /*   By: ynenakho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/07 14:27:37 by ynenakho          #+#    #+#             */
-/*   Updated: 2017/10/07 20:14:57 by ynenakho         ###   ########.fr       */
+/*   Updated: 2017/10/08 17:08:54 by jtahirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,18 @@ void	print_map(t_map *map)
 		ft_putchar('\n');
 		i++;
 	}
+}
+
+void	free_map(t_map *map)
+{
+	int i;
+
+	i = 0;
+	while (i < map->size)
+	{
+		ft_memdel((void **)&(map->array[i]));
+		i++;
+	}
+	ft_memdel((void **)&(map->array));
+	ft_memdel((void **)&map);
 }
